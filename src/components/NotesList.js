@@ -11,16 +11,15 @@ const NotesList = (props) => {
   return (
     <List {...props}>
       <Datagrid>
-        <TextField source="id" />
-        <TextField source="name" />
-        <TextField source="location" />
-        <TextField source="address" />
-        <TextField source="pec" />
-        <TextField source="taxcode" />
-        <TextField source="category" />
-        <TextField source="leaderboard" />
-        <TextField source="isWinner" />
-        <TextField source="winnerDate" />
+        <TextField source="name" label="Nome"/>
+        <TextField source="location" label="Località"/>
+        <TextField source="address" label="Indirizzo"/>
+        <TextField source="pec" label="PEC"/>
+        <TextField source="taxcode" label="Cod. Fiscale"/>
+        <TextField source="category" label="Categoria"/>
+        <TextField source="leaderboard" label="Classifica"/>
+        <TextField source="isWinner" label="Aggiudicataria"/>
+        <TextField source="winnerDate" label="Data"/>
         <EditButton label="Modifica" basePath="/notes" />
         <DeleteButton label="Elimina" basePath="/notes" />
       </Datagrid>
