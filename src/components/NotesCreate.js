@@ -4,7 +4,15 @@ const NotesCreate = (props) => {
   return (
     <Create {...props}>
       <SimpleForm>
-        <TextInput source="text" required />
+        <TextInput source="name" />
+        <TextInput source="location" />
+        <TextInput source="address" />
+        <TextInput source="pec" />
+        <TextInput source="taxcode" />
+        <TextInput source="category" />
+        <TextInput source="leaderboard"/>
+        <TextInput source="isWinner" />
+        <TextInput source="winnerDate" />
       </SimpleForm>
     </Create>
   );

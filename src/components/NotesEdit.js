@@ -5,7 +5,16 @@ const NotesEdit = (props) => {
     <Edit {...props}>
       <SimpleForm>
         <TextInput disabled source="id" />
-        <TextInput required source="text" />
+        <TextInput disabled source="id" />
+        <TextInput required source="name" />
+        <TextInput required source="location" />
+        <TextInput required source="address" />
+        <TextInput required source="pec" />
+        <TextInput required source="taxcode" />
+        <TextInput required source="category" />
+        <TextInput required source="leaderboard" />
+        <TextInput required source="isWinner" />
+        <TextInput required source="winnerDate" />
       </SimpleForm>
     </Edit>
   );
