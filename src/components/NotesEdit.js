@@ -4,17 +4,16 @@ const NotesEdit = (props) => {
   return (
     <Edit {...props}>
       <SimpleForm>
-        <TextInput disabled source="id" />
-        <TextInput disabled source="id" />
-        <TextInput required source="name" />
-        <TextInput required source="location" />
-        <TextInput required source="address" />
-        <TextInput required source="pec" />
-        <TextInput required source="taxcode" />
-        <TextInput required source="category" />
-        <TextInput required source="leaderboard" />
-        <TextInput required source="isWinner" />
-        <TextInput required source="winnerDate" />
+        <TextInput disabled source="id"/>
+        <TextInput required source="name" label="Nome"/>
+        <TextInput required source="location" label="Località"/>
+        <TextInput required source="address" label="Indirizzo"/>
+        <TextInput required source="pec" label="PEC"/>
+        <TextInput required source="taxcode" label="Cod. Fiscale"/>
+        <TextInput required source="category" label="Categoria"/>
+        <TextInput required source="leaderboard" label="Classifica"/>
+        <TextInput  source="isWinner" label="Aggiudicatrice"/>
+        <TextInput  source="winnerDate" label="Data"/>
       </SimpleForm>
     </Edit>
   );
