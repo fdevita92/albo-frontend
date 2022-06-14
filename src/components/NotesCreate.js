@@ -65,8 +65,8 @@ const NotesCreate = (props) => {
                 { id: 'OS35', name: 'OS35'},
         ]} />
         <TextInput source="leaderboard" label="Classifica"/>
-        <TextInput source="isWinner" label="Aggiudicatrice"/>
-        <TextInput source="winnerDate" label="Data"/>
+        <TextInput source="isWinner" label="Aggiudicataria"/>
+        <DateInput source="winnerDate" label="Data"/>
       </SimpleForm>
     </Create>
   );
