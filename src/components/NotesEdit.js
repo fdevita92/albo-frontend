@@ -62,6 +62,7 @@ const NotesEdit = (props) => {
   return (
     <Edit title="Modifica Impresa" {...props}>
       <SimpleForm>
+        <TextInput required source="number" label="Numero"/>
         <TextInput required source="name" label="Ragione sociale"/>
         <TextInput required source="location" label="Località"/>
         <TextInput required source="address" label="Indirizzo"/>

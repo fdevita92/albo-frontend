@@ -62,6 +62,7 @@ const NotesCreate = (props) => {
   return (
     <Create title="Aggiungi nuova Impresa" {...props}>
       <SimpleForm>
+        <TextInput required source="number" label="Numero"/>
         <TextInput required source="name" label="Ragione sociale"/>
         <TextInput required source="location" label="Località"/>
         <TextInput required source="address" label="Indirizzo"/>

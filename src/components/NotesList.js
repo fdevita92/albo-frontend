@@ -9,12 +9,11 @@ import {
 } from 'react-admin';
 
 
-
-
 const NotesList = (props) => {
   return (
     <List title={"Albi"} {...props}>
       <Datagrid>
+        <TextField source="number" label="Numero"/>
         <TextField source="name" label="Ragione sociale"/>
         <TextField source="location" label="Località"/>
         <TextField source="address" label="Indirizzo"/>
