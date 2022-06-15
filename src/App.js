@@ -6,6 +6,7 @@ import dataProvider from './dataProvider';
 import NotesList from './components/NotesList';
 import NotesEdit from './components/NotesEdit';
 import NotesCreate from './components/NotesCreate';
+import NotesShow from './components/NotesShow'
 
 const i18nProvider = polyglotI18nProvider(() => italianMessages, "it", {
 	allowMissing: true,
@@ -20,6 +21,7 @@ function App() {
         list={NotesList}
         edit={NotesEdit}
         create={NotesCreate}
+        show={NotesShow}
       />
     </Admin>
   );

@@ -14,7 +14,7 @@ import {
 const NotesList = (props) => {
   return (
     <List title={"Albi"} {...props}>
-      <Datagrid rowClick="show">
+      <Datagrid>
         <TextField source="name" label="Ragione sociale"/>
         <TextField source="location" label="Località"/>
         <TextField source="address" label="Indirizzo"/>
