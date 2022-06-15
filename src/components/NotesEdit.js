@@ -1,5 +1,5 @@
 import React from 'react';
-import { Edit, SimpleForm, TextInput, DateInput, SelectArrayInput } from 'react-admin';
+import { Edit, SimpleForm, TextInput, DateInput, SelectArrayInput} from 'react-admin';
 const NotesEdit = (props) => {
   return (
     <Edit {...props}>

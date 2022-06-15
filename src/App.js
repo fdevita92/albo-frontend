@@ -1,16 +1,23 @@
 import React from 'react';
 import { Admin, Resource} from 'react-admin';
+import polyglotI18nProvider from "ra-i18n-polyglot";
+import italianMessages from "ra-language-italian";
 import dataProvider from './dataProvider';
 import NotesList from './components/NotesList';
 import NotesEdit from './components/NotesEdit';
 import NotesCreate from './components/NotesCreate';
 
+const i18nProvider = polyglotI18nProvider(() => italianMessages, "it", {
+	allowMissing: true,
+});
+
 
 function App() {
   return (
-    <Admin dataProvider={dataProvider}>
+    <Admin dataProvider={dataProvider} i18nProvider={i18nProvider}>
       <Resource
         name="notes"
+        options = {{label:"Imprese di lavori"}}
         list={NotesList}
         edit={NotesEdit}
         create={NotesCreate}
