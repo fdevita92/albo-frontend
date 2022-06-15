@@ -5,12 +5,16 @@ import {
   TextField,
   EditButton,
   DeleteButton,
+  ShowButton,
 } from 'react-admin';
+
+
+
 
 const NotesList = (props) => {
   return (
-    <List {...props}>
-      <Datagrid>
+    <List title={"Albi"} {...props}>
+      <Datagrid rowClick="show">
         <TextField source="name" label="Ragione sociale"/>
         <TextField source="location" label="Località"/>
         <TextField source="address" label="Indirizzo"/>
@@ -22,6 +26,7 @@ const NotesList = (props) => {
         <TextField source="winnerDate" label="Data"/>
         <EditButton label="Modifica" basePath="/notes" />
         <DeleteButton label="Elimina" basePath="/notes" />
+        <ShowButton label="Mostra" basePath='/notes'/>
       </Datagrid>
     </List>
   );

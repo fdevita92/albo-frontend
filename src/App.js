@@ -11,7 +11,6 @@ const i18nProvider = polyglotI18nProvider(() => italianMessages, "it", {
 	allowMissing: true,
 });
 
-
 function App() {
   return (
     <Admin dataProvider={dataProvider} i18nProvider={i18nProvider}>

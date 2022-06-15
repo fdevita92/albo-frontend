@@ -2,13 +2,13 @@ import React from 'react';
 import { Create, SimpleForm, TextInput , DateInput, SelectArrayInput} from 'react-admin';
 const NotesCreate = (props) => {
   return (
-    <Create {...props}>
+    <Create title="Aggiungi nuova Impresa" {...props}>
       <SimpleForm>
-        <TextInput source="name" label="Ragione sociale"/>
-        <TextInput source="location" label="Località"/>
-        <TextInput source="address" label="Indirizzo"/>
-        <TextInput source="pec" label="PEC"/>
-        <TextInput source="taxcode" label="Cod. Fiscale"/>
+        <TextInput required source="name" label="Ragione sociale"/>
+        <TextInput required source="location" label="Località"/>
+        <TextInput required source="address" label="Indirizzo"/>
+        <TextInput required source="pec" label="PEC"/>
+        <TextInput required source="taxcode" label="Cod. Fiscale"/>
         <SelectArrayInput source="categories_soa" label="Categoria SOA" choices={[
                 { id: 'OG1', name: 'OG1' },
                 { id: 'OG2', name: 'OG2' },

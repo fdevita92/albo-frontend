@@ -1,10 +1,10 @@
 import React from 'react';
 import { Edit, SimpleForm, TextInput, DateInput, SelectArrayInput} from 'react-admin';
+
 const NotesEdit = (props) => {
   return (
-    <Edit {...props}>
+    <Edit title="Modifica Impresa" {...props}>
       <SimpleForm>
-        <TextInput disabled source="id"/>
         <TextInput required source="name" label="Ragione sociale"/>
         <TextInput required source="location" label="Località"/>
         <TextInput required source="address" label="Indirizzo"/>
