@@ -1,4 +1,5 @@
 import React from 'react';
+import { unparse as convertToCSV } from 'papaparse/papaparse.min';
 import {
   List,
   Datagrid,
@@ -8,7 +9,9 @@ import {
   ShowButton,
   SearchInput,
   AutocompleteArrayInput,
+  downloadCSV,
 } from 'react-admin';
+
 
 const categories = [
   { id: 'OG1', name: 'OG1' },
@@ -1628,17 +1631,28 @@ const categories_soa = [{
   name: "OS35-VIII"
 }]; 
 
+
+
 const notesFilter = [
 	<SearchInput source='q' alwaysOn />,
   <AutocompleteArrayInput source="categories_soa" label="Categoria SOA" choices={categories_soa}/>,
   <AutocompleteArrayInput source="categories_not_soa" label="Categoria non SOA" choices={categories}/>,
 ];
 
+const exporter = data => {
+  const csv = convertToCSV({
+      data,
+      columns:["Ragione sociale", "Località", "Indirizzo", "Codice fiscale", "PEC", "Categorie SOA", "Categorie non SOA", "Data invito", "Data aggiudicatrice"],
+      fields: ['name','location','address','taxcode','pec','categories_soa','categories_not_soa','invitedDate','winnerDate'],
+  });
+  downloadCSV(csv, 'Imprese_lavori');
+};
+
 
 //const NotesList = (props) => {
 export const NotesList = ({ ...props }) => {
   return (
-    <List filters={notesFilter} title={"Albi"} {...props}>
+    <List filters={notesFilter} title={"Albi"} exporter={exporter} {...props}>
       <Datagrid>
         <TextField source="number" label="Numero"/>
         <TextField source="name" label="Ragione sociale"/>

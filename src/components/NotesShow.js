@@ -1,4 +1,4 @@
-import { SimpleShowLayout, TextField, Show } from "react-admin";
+import { SimpleShowLayout, TextField, Show,} from "react-admin";
 import React from 'react';
 
 
@@ -11,7 +11,7 @@ export const NotesShow = (props) => {
             <TextField source="location" label="Località"/>
             <TextField source="address" label="Indirizzo"/>
             <TextField source="pec" label="PEC"/>
-            <TextField source="taxcode" label="Cod. Fiscale"/>
+            <TextField source="taxcode" label="Cod. Fiscale"/>     
             <TextField source="categories_soa" label="Categorie SOA"/>
             <TextField source="categories_not_soa" label="Categorie non SOA"/>
             <TextField source="invitedDate" label="Data invito"/>
