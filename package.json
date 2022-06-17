@@ -35,6 +35,8 @@
     ]
   },
   "devDependencies": {
-    "ra-language-italian": "^3.13.1"
+    "ra-language-italian": "^3.13.1",
+    "rc-multi-level-selector": "^0.3.4",
+    "react-multi-level-selector": "^1.0.1"
   }
 }

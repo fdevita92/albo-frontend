@@ -6,7 +6,7 @@ export const NotesShow = (props) => {
     return(
 	<Show title={"Mostra Impresa"} {...props}>
 		<SimpleShowLayout>
-            <TextField source='number' label='Numbero' />
+            <TextField source='number' label='Numero' />
 			<TextField source='name' label='Nome' />
             <TextField source="location" label="Località"/>
             <TextField source="address" label="Indirizzo"/>
@@ -14,8 +14,8 @@ export const NotesShow = (props) => {
             <TextField source="taxcode" label="Cod. Fiscale"/>
             <TextField source="categories_soa" label="Categorie SOA"/>
             <TextField source="categories_not_soa" label="Categorie non SOA"/>
-            <TextField source="isWinner" label="Aggiudicataria"/>
-            <TextField source="winnerDate" label="Data"/>	
+            <TextField source="invitedDate" label="Data invito"/>
+            <TextField source="winnerDate" label="Data aggiudicatrice"/>	
 		</SimpleShowLayout>
 	</Show>
     );

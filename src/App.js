@@ -3,7 +3,7 @@ import { Admin, Resource} from 'react-admin';
 import polyglotI18nProvider from "ra-i18n-polyglot";
 import italianMessages from "ra-language-italian";
 import dataProvider from './dataProvider';
-import NotesList from './components/NotesList';
+import {NotesList} from './components/NotesList';
 import NotesEdit from './components/NotesEdit';
 import NotesCreate from './components/NotesCreate';
 import NotesShow from './components/NotesShow'
