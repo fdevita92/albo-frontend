@@ -7,7 +7,7 @@ import {
   DeleteButton,
   ShowButton,
   SearchInput,
-  SelectArrayInput,
+  AutocompleteArrayInput,
 } from 'react-admin';
 
 const categories = [
@@ -65,10 +65,1573 @@ const categories = [
   { id: 'OS35', name: 'OS35'},
 ];
 
+
+const categories_soa = [{
+  id: "OG1-I",
+  name: "OG1-I"
+}, {
+  id: "OG1-II",
+  name: "OG1-II"
+}, {
+  id: "OG1-III",
+  name: "OG1-III"
+}, {
+  id: "OG1-III-bis",
+  name: "OG1-III-bis"
+}, {
+  id: "OG1-IV",
+  name: "OG1-IV"
+}, {
+  id: "OG1-IV-bis",
+  name: "OG1-IV-bis"
+}, {
+  id: "OG1-V",
+  name: "OG1-V"
+}, {
+  id: "OG1-VI",
+  name: "OG1-VI"
+}, {
+  id: "OG1-VII",
+  name: "OG1-VII"
+}, {
+  id: "OG1-VIII",
+  name: "OG1-VIII"
+}, {
+  id: "OG2-I",
+  name: "OG2-I"
+}, {
+  id: "OG2-II",
+  name: "OG2-II"
+}, {
+  id: "OG2-III",
+  name: "OG2-III"
+}, {
+  id: "OG2-III-bis",
+  name: "OG2-III-bis"
+}, {
+  id: "OG2-IV",
+  name: "OG2-IV"
+}, {
+  id: "OG2-IV-bis",
+  name: "OG2-IV-bis"
+}, {
+  id: "OG2-V",
+  name: "OG2-V"
+}, {
+  id: "OG2-VI",
+  name: "OG2-VI"
+}, {
+  id: "OG2-VII",
+  name: "OG2-VII"
+}, {
+  id: "OG2-VIII",
+  name: "OG2-VIII"
+}, {
+  id: "OG3-I",
+  name: "OG3-I"
+}, {
+  id: "OG3-II",
+  name: "OG3-II"
+}, {
+  id: "OG3-III",
+  name: "OG3-III"
+}, {
+  id: "OG3-III-bis",
+  name: "OG3-III-bis"
+}, {
+  id: "OG3-IV",
+  name: "OG3-IV"
+}, {
+  id: "OG3-IV-bis",
+  name: "OG3-IV-bis"
+}, {
+  id: "OG3-V",
+  name: "OG3-V"
+}, {
+  id: "OG3-VI",
+  name: "OG3-VI"
+}, {
+  id: "OG3-VII",
+  name: "OG3-VII"
+}, {
+  id: "OG3-VIII",
+  name: "OG3-VIII"
+}, {
+  id: "OG4-I",
+  name: "OG4-I"
+}, {
+  id: "OG4-II",
+  name: "OG4-II"
+}, {
+  id: "OG4-III",
+  name: "OG4-III"
+}, {
+  id: "OG4-III-bis",
+  name: "OG4-III-bis"
+}, {
+  id: "OG4-IV",
+  name: "OG4-IV"
+}, {
+  id: "OG4-IV-bis",
+  name: "OG4-IV-bis"
+}, {
+  id: "OG4-V",
+  name: "OG4-V"
+}, {
+  id: "OG4-VI",
+  name: "OG4-VI"
+}, {
+  id: "OG4-VII",
+  name: "OG4-VII"
+}, {
+  id: "OG4-VIII",
+  name: "OG4-VIII"
+}, {
+  id: "OG5-I",
+  name: "OG5-I"
+}, {
+  id: "OG5-II",
+  name: "OG5-II"
+}, {
+  id: "OG5-III",
+  name: "OG5-III"
+}, {
+  id: "OG5-III-bis",
+  name: "OG5-III-bis"
+}, {
+  id: "OG5-IV",
+  name: "OG5-IV"
+}, {
+  id: "OG5-IV-bis",
+  name: "OG5-IV-bis"
+}, {
+  id: "OG5-V",
+  name: "OG5-V"
+}, {
+  id: "OG5-VI",
+  name: "OG5-VI"
+}, {
+  id: "OG5-VII",
+  name: "OG5-VII"
+}, {
+  id: "OG5-VIII",
+  name: "OG5-VIII"
+}, {
+  id: "OG6-I",
+  name: "OG6-I"
+}, {
+  id: "OG6-II",
+  name: "OG6-II"
+}, {
+  id: "OG6-III",
+  name: "OG6-III"
+}, {
+  id: "OG6-III-bis",
+  name: "OG6-III-bis"
+}, {
+  id: "OG6-IV",
+  name: "OG6-IV"
+}, {
+  id: "OG6-IV-bis",
+  name: "OG6-IV-bis"
+}, {
+  id: "OG6-V",
+  name: "OG6-V"
+}, {
+  id: "OG6-VI",
+  name: "OG6-VI"
+}, {
+  id: "OG6-VII",
+  name: "OG6-VII"
+}, {
+  id: "OG6-VIII",
+  name: "OG6-VIII"
+}, {
+  id: "OG7-I",
+  name: "OG7-I"
+}, {
+  id: "OG7-II",
+  name: "OG7-II"
+}, {
+  id: "OG7-III",
+  name: "OG7-III"
+}, {
+  id: "OG7-III-bis",
+  name: "OG7-III-bis"
+}, {
+  id: "OG7-IV",
+  name: "OG7-IV"
+}, {
+  id: "OG7-IV-bis",
+  name: "OG7-IV-bis"
+}, {
+  id: "OG7-V",
+  name: "OG7-V"
+}, {
+  id: "OG7-VI",
+  name: "OG7-VI"
+}, {
+  id: "OG7-VII",
+  name: "OG7-VII"
+}, {
+  id: "OG7-VIII",
+  name: "OG7-VIII"
+}, {
+  id: "OG8-I",
+  name: "OG8-I"
+}, {
+  id: "OG8-II",
+  name: "OG8-II"
+}, {
+  id: "OG8-III",
+  name: "OG8-III"
+}, {
+  id: "OG8-III-bis",
+  name: "OG8-III-bis"
+}, {
+  id: "OG8-IV",
+  name: "OG8-IV"
+}, {
+  id: "OG8-IV-bis",
+  name: "OG8-IV-bis"
+}, {
+  id: "OG8-V",
+  name: "OG8-V"
+}, {
+  id: "OG8-VI",
+  name: "OG8-VI"
+}, {
+  id: "OG8-VII",
+  name: "OG8-VII"
+}, {
+  id: "OG8-VIII",
+  name: "OG8-VIII"
+}, {
+  id: "OG9-I",
+  name: "OG9-I"
+}, {
+  id: "OG9-II",
+  name: "OG9-II"
+}, {
+  id: "OG9-III",
+  name: "OG9-III"
+}, {
+  id: "OG9-III-bis",
+  name: "OG9-III-bis"
+}, {
+  id: "OG9-IV",
+  name: "OG9-IV"
+}, {
+  id: "OG9-IV-bis",
+  name: "OG9-IV-bis"
+}, {
+  id: "OG9-V",
+  name: "OG9-V"
+}, {
+  id: "OG9-VI",
+  name: "OG9-VI"
+}, {
+  id: "OG9-VII",
+  name: "OG9-VII"
+}, {
+  id: "OG9-VIII",
+  name: "OG9-VIII"
+}, {
+  id: "OG10-I",
+  name: "OG10-I"
+}, {
+  id: "OG10-II",
+  name: "OG10-II"
+}, {
+  id: "OG10-III",
+  name: "OG10-III"
+}, {
+  id: "OG10-III-bis",
+  name: "OG10-III-bis"
+}, {
+  id: "OG10-IV",
+  name: "OG10-IV"
+}, {
+  id: "OG10-IV-bis",
+  name: "OG10-IV-bis"
+}, {
+  id: "OG10-V",
+  name: "OG10-V"
+}, {
+  id: "OG10-VI",
+  name: "OG10-VI"
+}, {
+  id: "OG10-VII",
+  name: "OG10-VII"
+}, {
+  id: "OG10-VIII",
+  name: "OG10-VIII"
+}, {
+  id: "OG11-I",
+  name: "OG11-I"
+}, {
+  id: "OG11-II",
+  name: "OG11-II"
+}, {
+  id: "OG11-III",
+  name: "OG11-III"
+}, {
+  id: "OG11-III-bis",
+  name: "OG11-III-bis"
+}, {
+  id: "OG11-IV",
+  name: "OG11-IV"
+}, {
+  id: "OG11-IV-bis",
+  name: "OG11-IV-bis"
+}, {
+  id: "OG11-V",
+  name: "OG11-V"
+}, {
+  id: "OG11-VI",
+  name: "OG11-VI"
+}, {
+  id: "OG11-VII",
+  name: "OG11-VII"
+}, {
+  id: "OG11-VIII",
+  name: "OG11-VIII"
+}, {
+  id: "OG12-I",
+  name: "OG12-I"
+}, {
+  id: "OG12-II",
+  name: "OG12-II"
+}, {
+  id: "OG12-III",
+  name: "OG12-III"
+}, {
+  id: "OG12-III-bis",
+  name: "OG12-III-bis"
+}, {
+  id: "OG12-IV",
+  name: "OG12-IV"
+}, {
+  id: "OG12-IV-bis",
+  name: "OG12-IV-bis"
+}, {
+  id: "OG12-V",
+  name: "OG12-V"
+}, {
+  id: "OG12-VI",
+  name: "OG12-VI"
+}, {
+  id: "OG12-VII",
+  name: "OG12-VII"
+}, {
+  id: "OG12-VIII",
+  name: "OG12-VIII"
+}, {
+  id: "OG13-I",
+  name: "OG13-I"
+}, {
+  id: "OG13-II",
+  name: "OG13-II"
+}, {
+  id: "OG13-III",
+  name: "OG13-III"
+}, {
+  id: "OG13-III-bis",
+  name: "OG13-III-bis"
+}, {
+  id: "OG13-IV",
+  name: "OG13-IV"
+}, {
+  id: "OG13-IV-bis",
+  name: "OG13-IV-bis"
+}, {
+  id: "OG13-V",
+  name: "OG13-V"
+}, {
+  id: "OG13-VI",
+  name: "OG13-VI"
+}, {
+  id: "OG13-VII",
+  name: "OG13-VII"
+}, {
+  id: "OG13-VIII",
+  name: "OG13-VIII"
+}, {
+  id: "OS1-I",
+  name: "OS1-I"
+}, {
+  id: "OS1-II",
+  name: "OS1-II"
+}, {
+  id: "OS1-III",
+  name: "OS1-III"
+}, {
+  id: "OS1-III-bis",
+  name: "OS1-III-bis"
+}, {
+  id: "OS1-IV",
+  name: "OS1-IV"
+}, {
+  id: "OS1-IV-bis",
+  name: "OS1-IV-bis"
+}, {
+  id: "OS1-V",
+  name: "OS1-V"
+}, {
+  id: "OS1-VI",
+  name: "OS1-VI"
+}, {
+  id: "OS1-VII",
+  name: "OS1-VII"
+}, {
+  id: "OS1-VIII",
+  name: "OS1-VIII"
+}, {
+  id: "OS2/A-I",
+  name: "OS2/A-I"
+}, {
+  id: "OS2/A-II",
+  name: "OS2/A-II"
+}, {
+  id: "OS2/A-III",
+  name: "OS2/A-III"
+}, {
+  id: "OS2/A-III-bis",
+  name: "OS2/A-III-bis"
+}, {
+  id: "OS2/A-IV",
+  name: "OS2/A-IV"
+}, {
+  id: "OS2/A-IV-bis",
+  name: "OS2/A-IV-bis"
+}, {
+  id: "OS2/A-V",
+  name: "OS2/A-V"
+}, {
+  id: "OS2/A-VI",
+  name: "OS2/A-VI"
+}, {
+  id: "OS2/A-VII",
+  name: "OS2/A-VII"
+}, {
+  id: "OS2/A-VIII",
+  name: "OS2/A-VIII"
+}, {
+  id: "OS2/B-I",
+  name: "OS2/B-I"
+}, {
+  id: "OS2/B-II",
+  name: "OS2/B-II"
+}, {
+  id: "OS2/B-III",
+  name: "OS2/B-III"
+}, {
+  id: "OS2/B-III-bis",
+  name: "OS2/B-III-bis"
+}, {
+  id: "OS2/B-IV",
+  name: "OS2/B-IV"
+}, {
+  id: "OS2/B-IV-bis",
+  name: "OS2/B-IV-bis"
+}, {
+  id: "OS2/B-V",
+  name: "OS2/B-V"
+}, {
+  id: "OS2/B-VI",
+  name: "OS2/B-VI"
+}, {
+  id: "OS2/B-VII",
+  name: "OS2/B-VII"
+}, {
+  id: "OS2/B-VIII",
+  name: "OS2/B-VIII"
+}, {
+  id: "OS3-I",
+  name: "OS3-I"
+}, {
+  id: "OS3-II",
+  name: "OS3-II"
+}, {
+  id: "OS3-III",
+  name: "OS3-III"
+}, {
+  id: "OS3-III-bis",
+  name: "OS3-III-bis"
+}, {
+  id: "OS3-IV",
+  name: "OS3-IV"
+}, {
+  id: "OS3-IV-bis",
+  name: "OS3-IV-bis"
+}, {
+  id: "OS3-V",
+  name: "OS3-V"
+}, {
+  id: "OS3-VI",
+  name: "OS3-VI"
+}, {
+  id: "OS3-VII",
+  name: "OS3-VII"
+}, {
+  id: "OS3-VIII",
+  name: "OS3-VIII"
+}, {
+  id: "OS4-I",
+  name: "OS4-I"
+}, {
+  id: "OS4-II",
+  name: "OS4-II"
+}, {
+  id: "OS4-III",
+  name: "OS4-III"
+}, {
+  id: "OS4-III-bis",
+  name: "OS4-III-bis"
+}, {
+  id: "OS4-IV",
+  name: "OS4-IV"
+}, {
+  id: "OS4-IV-bis",
+  name: "OS4-IV-bis"
+}, {
+  id: "OS4-V",
+  name: "OS4-V"
+}, {
+  id: "OS4-VI",
+  name: "OS4-VI"
+}, {
+  id: "OS4-VII",
+  name: "OS4-VII"
+}, {
+  id: "OS4-VIII",
+  name: "OS4-VIII"
+}, {
+  id: "OS5-I",
+  name: "OS5-I"
+}, {
+  id: "OS5-II",
+  name: "OS5-II"
+}, {
+  id: "OS5-III",
+  name: "OS5-III"
+}, {
+  id: "OS5-III-bis",
+  name: "OS5-III-bis"
+}, {
+  id: "OS5-IV",
+  name: "OS5-IV"
+}, {
+  id: "OS5-IV-bis",
+  name: "OS5-IV-bis"
+}, {
+  id: "OS5-V",
+  name: "OS5-V"
+}, {
+  id: "OS5-VI",
+  name: "OS5-VI"
+}, {
+  id: "OS5-VII",
+  name: "OS5-VII"
+}, {
+  id: "OS5-VIII",
+  name: "OS5-VIII"
+}, {
+  id: "OS6-I",
+  name: "OS6-I"
+}, {
+  id: "OS6-II",
+  name: "OS6-II"
+}, {
+  id: "OS6-III",
+  name: "OS6-III"
+}, {
+  id: "OS6-III-bis",
+  name: "OS6-III-bis"
+}, {
+  id: "OS6-IV",
+  name: "OS6-IV"
+}, {
+  id: "OS6-IV-bis",
+  name: "OS6-IV-bis"
+}, {
+  id: "OS6-V",
+  name: "OS6-V"
+}, {
+  id: "OS6-VI",
+  name: "OS6-VI"
+}, {
+  id: "OS6-VII",
+  name: "OS6-VII"
+}, {
+  id: "OS6-VIII",
+  name: "OS6-VIII"
+}, {
+  id: "OS7-I",
+  name: "OS7-I"
+}, {
+  id: "OS7-II",
+  name: "OS7-II"
+}, {
+  id: "OS7-III",
+  name: "OS7-III"
+}, {
+  id: "OS7-III-bis",
+  name: "OS7-III-bis"
+}, {
+  id: "OS7-IV",
+  name: "OS7-IV"
+}, {
+  id: "OS7-IV-bis",
+  name: "OS7-IV-bis"
+}, {
+  id: "OS7-V",
+  name: "OS7-V"
+}, {
+  id: "OS7-VI",
+  name: "OS7-VI"
+}, {
+  id: "OS7-VII",
+  name: "OS7-VII"
+}, {
+  id: "OS7-VIII",
+  name: "OS7-VIII"
+}, {
+  id: "OS8-I",
+  name: "OS8-I"
+}, {
+  id: "OS8-II",
+  name: "OS8-II"
+}, {
+  id: "OS8-III",
+  name: "OS8-III"
+}, {
+  id: "OS8-III-bis",
+  name: "OS8-III-bis"
+}, {
+  id: "OS8-IV",
+  name: "OS8-IV"
+}, {
+  id: "OS8-IV-bis",
+  name: "OS8-IV-bis"
+}, {
+  id: "OS8-V",
+  name: "OS8-V"
+}, {
+  id: "OS8-VI",
+  name: "OS8-VI"
+}, {
+  id: "OS8-VII",
+  name: "OS8-VII"
+}, {
+  id: "OS8-VIII",
+  name: "OS8-VIII"
+}, {
+  id: "OS9-I",
+  name: "OS9-I"
+}, {
+  id: "OS9-II",
+  name: "OS9-II"
+}, {
+  id: "OS9-III",
+  name: "OS9-III"
+}, {
+  id: "OS9-III-bis",
+  name: "OS9-III-bis"
+}, {
+  id: "OS9-IV",
+  name: "OS9-IV"
+}, {
+  id: "OS9-IV-bis",
+  name: "OS9-IV-bis"
+}, {
+  id: "OS9-V",
+  name: "OS9-V"
+}, {
+  id: "OS9-VI",
+  name: "OS9-VI"
+}, {
+  id: "OS9-VII",
+  name: "OS9-VII"
+}, {
+  id: "OS9-VIII",
+  name: "OS9-VIII"
+}, {
+  id: "OS10-I",
+  name: "OS10-I"
+}, {
+  id: "OS10-II",
+  name: "OS10-II"
+}, {
+  id: "OS10-III",
+  name: "OS10-III"
+}, {
+  id: "OS10-III-bis",
+  name: "OS10-III-bis"
+}, {
+  id: "OS10-IV",
+  name: "OS10-IV"
+}, {
+  id: "OS10-IV-bis",
+  name: "OS10-IV-bis"
+}, {
+  id: "OS10-V",
+  name: "OS10-V"
+}, {
+  id: "OS10-VI",
+  name: "OS10-VI"
+}, {
+  id: "OS10-VII",
+  name: "OS10-VII"
+}, {
+  id: "OS10-VIII",
+  name: "OS10-VIII"
+}, {
+  id: "OS11-I",
+  name: "OS11-I"
+}, {
+  id: "OS11-II",
+  name: "OS11-II"
+}, {
+  id: "OS11-III",
+  name: "OS11-III"
+}, {
+  id: "OS11-III-bis",
+  name: "OS11-III-bis"
+}, {
+  id: "OS11-IV",
+  name: "OS11-IV"
+}, {
+  id: "OS11-IV-bis",
+  name: "OS11-IV-bis"
+}, {
+  id: "OS11-V",
+  name: "OS11-V"
+}, {
+  id: "OS11-VI",
+  name: "OS11-VI"
+}, {
+  id: "OS11-VII",
+  name: "OS11-VII"
+}, {
+  id: "OS11-VIII",
+  name: "OS11-VIII"
+}, {
+  id: "OS12/A-I",
+  name: "OS12/A-I"
+}, {
+  id: "OS12/A-II",
+  name: "OS12/A-II"
+}, {
+  id: "OS12/A-III",
+  name: "OS12/A-III"
+}, {
+  id: "OS12/A-III-bis",
+  name: "OS12/A-III-bis"
+}, {
+  id: "OS12/A-IV",
+  name: "OS12/A-IV"
+}, {
+  id: "OS12/A-IV-bis",
+  name: "OS12/A-IV-bis"
+}, {
+  id: "OS12/A-V",
+  name: "OS12/A-V"
+}, {
+  id: "OS12/A-VI",
+  name: "OS12/A-VI"
+}, {
+  id: "OS12/A-VII",
+  name: "OS12/A-VII"
+}, {
+  id: "OS12/A-VIII",
+  name: "OS12/A-VIII"
+}, {
+  id: "OS12/B-I",
+  name: "OS12/B-I"
+}, {
+  id: "OS12/B-II",
+  name: "OS12/B-II"
+}, {
+  id: "OS12/B-III",
+  name: "OS12/B-III"
+}, {
+  id: "OS12/B-III-bis",
+  name: "OS12/B-III-bis"
+}, {
+  id: "OS12/B-IV",
+  name: "OS12/B-IV"
+}, {
+  id: "OS12/B-IV-bis",
+  name: "OS12/B-IV-bis"
+}, {
+  id: "OS12/B-V",
+  name: "OS12/B-V"
+}, {
+  id: "OS12/B-VI",
+  name: "OS12/B-VI"
+}, {
+  id: "OS12/B-VII",
+  name: "OS12/B-VII"
+}, {
+  id: "OS12/B-VIII",
+  name: "OS12/B-VIII"
+}, {
+  id: "OS13-I",
+  name: "OS13-I"
+}, {
+  id: "OS13-II",
+  name: "OS13-II"
+}, {
+  id: "OS13-III",
+  name: "OS13-III"
+}, {
+  id: "OS13-III-bis",
+  name: "OS13-III-bis"
+}, {
+  id: "OS13-IV",
+  name: "OS13-IV"
+}, {
+  id: "OS13-IV-bis",
+  name: "OS13-IV-bis"
+}, {
+  id: "OS13-V",
+  name: "OS13-V"
+}, {
+  id: "OS13-VI",
+  name: "OS13-VI"
+}, {
+  id: "OS13-VII",
+  name: "OS13-VII"
+}, {
+  id: "OS13-VIII",
+  name: "OS13-VIII"
+}, {
+  id: "OS14-I",
+  name: "OS14-I"
+}, {
+  id: "OS14-II",
+  name: "OS14-II"
+}, {
+  id: "OS14-III",
+  name: "OS14-III"
+}, {
+  id: "OS14-III-bis",
+  name: "OS14-III-bis"
+}, {
+  id: "OS14-IV",
+  name: "OS14-IV"
+}, {
+  id: "OS14-IV-bis",
+  name: "OS14-IV-bis"
+}, {
+  id: "OS14-V",
+  name: "OS14-V"
+}, {
+  id: "OS14-VI",
+  name: "OS14-VI"
+}, {
+  id: "OS14-VII",
+  name: "OS14-VII"
+}, {
+  id: "OS14-VIII",
+  name: "OS14-VIII"
+}, {
+  id: "OS15-I",
+  name: "OS15-I"
+}, {
+  id: "OS15-II",
+  name: "OS15-II"
+}, {
+  id: "OS15-III",
+  name: "OS15-III"
+}, {
+  id: "OS15-III-bis",
+  name: "OS15-III-bis"
+}, {
+  id: "OS15-IV",
+  name: "OS15-IV"
+}, {
+  id: "OS15-IV-bis",
+  name: "OS15-IV-bis"
+}, {
+  id: "OS15-V",
+  name: "OS15-V"
+}, {
+  id: "OS15-VI",
+  name: "OS15-VI"
+}, {
+  id: "OS15-VII",
+  name: "OS15-VII"
+}, {
+  id: "OS15-VIII",
+  name: "OS15-VIII"
+}, {
+  id: "OS16-I",
+  name: "OS16-I"
+}, {
+  id: "OS16-II",
+  name: "OS16-II"
+}, {
+  id: "OS16-III",
+  name: "OS16-III"
+}, {
+  id: "OS16-III-bis",
+  name: "OS16-III-bis"
+}, {
+  id: "OS16-IV",
+  name: "OS16-IV"
+}, {
+  id: "OS16-IV-bis",
+  name: "OS16-IV-bis"
+}, {
+  id: "OS16-V",
+  name: "OS16-V"
+}, {
+  id: "OS16-VI",
+  name: "OS16-VI"
+}, {
+  id: "OS16-VII",
+  name: "OS16-VII"
+}, {
+  id: "OS16-VIII",
+  name: "OS16-VIII"
+}, {
+  id: "OS17-I",
+  name: "OS17-I"
+}, {
+  id: "OS17-II",
+  name: "OS17-II"
+}, {
+  id: "OS17-III",
+  name: "OS17-III"
+}, {
+  id: "OS17-III-bis",
+  name: "OS17-III-bis"
+}, {
+  id: "OS17-IV",
+  name: "OS17-IV"
+}, {
+  id: "OS17-IV-bis",
+  name: "OS17-IV-bis"
+}, {
+  id: "OS17-V",
+  name: "OS17-V"
+}, {
+  id: "OS17-VI",
+  name: "OS17-VI"
+}, {
+  id: "OS17-VII",
+  name: "OS17-VII"
+}, {
+  id: "OS17-VIII",
+  name: "OS17-VIII"
+}, {
+  id: "OS18/A-I",
+  name: "OS18/A-I"
+}, {
+  id: "OS18/A-II",
+  name: "OS18/A-II"
+}, {
+  id: "OS18/A-III",
+  name: "OS18/A-III"
+}, {
+  id: "OS18/A-III-bis",
+  name: "OS18/A-III-bis"
+}, {
+  id: "OS18/A-IV",
+  name: "OS18/A-IV"
+}, {
+  id: "OS18/A-IV-bis",
+  name: "OS18/A-IV-bis"
+}, {
+  id: "OS18/A-V",
+  name: "OS18/A-V"
+}, {
+  id: "OS18/A-VI",
+  name: "OS18/A-VI"
+}, {
+  id: "OS18/A-VII",
+  name: "OS18/A-VII"
+}, {
+  id: "OS18/A-VIII",
+  name: "OS18/A-VIII"
+}, {
+  id: "OS18/B-I",
+  name: "OS18/B-I"
+}, {
+  id: "OS18/B-II",
+  name: "OS18/B-II"
+}, {
+  id: "OS18/B-III",
+  name: "OS18/B-III"
+}, {
+  id: "OS18/B-III-bis",
+  name: "OS18/B-III-bis"
+}, {
+  id: "OS18/B-IV",
+  name: "OS18/B-IV"
+}, {
+  id: "OS18/B-IV-bis",
+  name: "OS18/B-IV-bis"
+}, {
+  id: "OS18/B-V",
+  name: "OS18/B-V"
+}, {
+  id: "OS18/B-VI",
+  name: "OS18/B-VI"
+}, {
+  id: "OS18/B-VII",
+  name: "OS18/B-VII"
+}, {
+  id: "OS18/B-VIII",
+  name: "OS18/B-VIII"
+}, {
+  id: "OS19-I",
+  name: "OS19-I"
+}, {
+  id: "OS19-II",
+  name: "OS19-II"
+}, {
+  id: "OS19-III",
+  name: "OS19-III"
+}, {
+  id: "OS19-III-bis",
+  name: "OS19-III-bis"
+}, {
+  id: "OS19-IV",
+  name: "OS19-IV"
+}, {
+  id: "OS19-IV-bis",
+  name: "OS19-IV-bis"
+}, {
+  id: "OS19-V",
+  name: "OS19-V"
+}, {
+  id: "OS19-VI",
+  name: "OS19-VI"
+}, {
+  id: "OS19-VII",
+  name: "OS19-VII"
+}, {
+  id: "OS19-VIII",
+  name: "OS19-VIII"
+}, {
+  id: "OS20/A-I",
+  name: "OS20/A-I"
+}, {
+  id: "OS20/A-II",
+  name: "OS20/A-II"
+}, {
+  id: "OS20/A-III",
+  name: "OS20/A-III"
+}, {
+  id: "OS20/A-III-bis",
+  name: "OS20/A-III-bis"
+}, {
+  id: "OS20/A-IV",
+  name: "OS20/A-IV"
+}, {
+  id: "OS20/A-IV-bis",
+  name: "OS20/A-IV-bis"
+}, {
+  id: "OS20/A-V",
+  name: "OS20/A-V"
+}, {
+  id: "OS20/A-VI",
+  name: "OS20/A-VI"
+}, {
+  id: "OS20/A-VII",
+  name: "OS20/A-VII"
+}, {
+  id: "OS20/A-VIII",
+  name: "OS20/A-VIII"
+}, {
+  id: "OS20/B-I",
+  name: "OS20/B-I"
+}, {
+  id: "OS20/B-II",
+  name: "OS20/B-II"
+}, {
+  id: "OS20/B-III",
+  name: "OS20/B-III"
+}, {
+  id: "OS20/B-III-bis",
+  name: "OS20/B-III-bis"
+}, {
+  id: "OS20/B-IV",
+  name: "OS20/B-IV"
+}, {
+  id: "OS20/B-IV-bis",
+  name: "OS20/B-IV-bis"
+}, {
+  id: "OS20/B-V",
+  name: "OS20/B-V"
+}, {
+  id: "OS20/B-VI",
+  name: "OS20/B-VI"
+}, {
+  id: "OS20/B-VII",
+  name: "OS20/B-VII"
+}, {
+  id: "OS20/B-VIII",
+  name: "OS20/B-VIII"
+}, {
+  id: "OS21-I",
+  name: "OS21-I"
+}, {
+  id: "OS21-II",
+  name: "OS21-II"
+}, {
+  id: "OS21-III",
+  name: "OS21-III"
+}, {
+  id: "OS21-III-bis",
+  name: "OS21-III-bis"
+}, {
+  id: "OS21-IV",
+  name: "OS21-IV"
+}, {
+  id: "OS21-IV-bis",
+  name: "OS21-IV-bis"
+}, {
+  id: "OS21-V",
+  name: "OS21-V"
+}, {
+  id: "OS21-VI",
+  name: "OS21-VI"
+}, {
+  id: "OS21-VII",
+  name: "OS21-VII"
+}, {
+  id: "OS21-VIII",
+  name: "OS21-VIII"
+}, {
+  id: "OS22-I",
+  name: "OS22-I"
+}, {
+  id: "OS22-II",
+  name: "OS22-II"
+}, {
+  id: "OS22-III",
+  name: "OS22-III"
+}, {
+  id: "OS22-III-bis",
+  name: "OS22-III-bis"
+}, {
+  id: "OS22-IV",
+  name: "OS22-IV"
+}, {
+  id: "OS22-IV-bis",
+  name: "OS22-IV-bis"
+}, {
+  id: "OS22-V",
+  name: "OS22-V"
+}, {
+  id: "OS22-VI",
+  name: "OS22-VI"
+}, {
+  id: "OS22-VII",
+  name: "OS22-VII"
+}, {
+  id: "OS22-VIII",
+  name: "OS22-VIII"
+}, {
+  id: "OS23-I",
+  name: "OS23-I"
+}, {
+  id: "OS23-II",
+  name: "OS23-II"
+}, {
+  id: "OS23-III",
+  name: "OS23-III"
+}, {
+  id: "OS23-III-bis",
+  name: "OS23-III-bis"
+}, {
+  id: "OS23-IV",
+  name: "OS23-IV"
+}, {
+  id: "OS23-IV-bis",
+  name: "OS23-IV-bis"
+}, {
+  id: "OS23-V",
+  name: "OS23-V"
+}, {
+  id: "OS23-VI",
+  name: "OS23-VI"
+}, {
+  id: "OS23-VII",
+  name: "OS23-VII"
+}, {
+  id: "OS23-VIII",
+  name: "OS23-VIII"
+}, {
+  id: "OS24-I",
+  name: "OS24-I"
+}, {
+  id: "OS24-II",
+  name: "OS24-II"
+}, {
+  id: "OS24-III",
+  name: "OS24-III"
+}, {
+  id: "OS24-III-bis",
+  name: "OS24-III-bis"
+}, {
+  id: "OS24-IV",
+  name: "OS24-IV"
+}, {
+  id: "OS24-IV-bis",
+  name: "OS24-IV-bis"
+}, {
+  id: "OS24-V",
+  name: "OS24-V"
+}, {
+  id: "OS24-VI",
+  name: "OS24-VI"
+}, {
+  id: "OS24-VII",
+  name: "OS24-VII"
+}, {
+  id: "OS24-VIII",
+  name: "OS24-VIII"
+}, {
+  id: "OS25-I",
+  name: "OS25-I"
+}, {
+  id: "OS25-II",
+  name: "OS25-II"
+}, {
+  id: "OS25-III",
+  name: "OS25-III"
+}, {
+  id: "OS25-III-bis",
+  name: "OS25-III-bis"
+}, {
+  id: "OS25-IV",
+  name: "OS25-IV"
+}, {
+  id: "OS25-IV-bis",
+  name: "OS25-IV-bis"
+}, {
+  id: "OS25-V",
+  name: "OS25-V"
+}, {
+  id: "OS25-VI",
+  name: "OS25-VI"
+}, {
+  id: "OS25-VII",
+  name: "OS25-VII"
+}, {
+  id: "OS25-VIII",
+  name: "OS25-VIII"
+}, {
+  id: "OS26-I",
+  name: "OS26-I"
+}, {
+  id: "OS26-II",
+  name: "OS26-II"
+}, {
+  id: "OS26-III",
+  name: "OS26-III"
+}, {
+  id: "OS26-III-bis",
+  name: "OS26-III-bis"
+}, {
+  id: "OS26-IV",
+  name: "OS26-IV"
+}, {
+  id: "OS26-IV-bis",
+  name: "OS26-IV-bis"
+}, {
+  id: "OS26-V",
+  name: "OS26-V"
+}, {
+  id: "OS26-VI",
+  name: "OS26-VI"
+}, {
+  id: "OS26-VII",
+  name: "OS26-VII"
+}, {
+  id: "OS26-VIII",
+  name: "OS26-VIII"
+}, {
+  id: "OS27-I",
+  name: "OS27-I"
+}, {
+  id: "OS27-II",
+  name: "OS27-II"
+}, {
+  id: "OS27-III",
+  name: "OS27-III"
+}, {
+  id: "OS27-III-bis",
+  name: "OS27-III-bis"
+}, {
+  id: "OS27-IV",
+  name: "OS27-IV"
+}, {
+  id: "OS27-IV-bis",
+  name: "OS27-IV-bis"
+}, {
+  id: "OS27-V",
+  name: "OS27-V"
+}, {
+  id: "OS27-VI",
+  name: "OS27-VI"
+}, {
+  id: "OS27-VII",
+  name: "OS27-VII"
+}, {
+  id: "OS27-VIII",
+  name: "OS27-VIII"
+}, {
+  id: "OS28-I",
+  name: "OS28-I"
+}, {
+  id: "OS28-II",
+  name: "OS28-II"
+}, {
+  id: "OS28-III",
+  name: "OS28-III"
+}, {
+  id: "OS28-III-bis",
+  name: "OS28-III-bis"
+}, {
+  id: "OS28-IV",
+  name: "OS28-IV"
+}, {
+  id: "OS28-IV-bis",
+  name: "OS28-IV-bis"
+}, {
+  id: "OS28-V",
+  name: "OS28-V"
+}, {
+  id: "OS28-VI",
+  name: "OS28-VI"
+}, {
+  id: "OS28-VII",
+  name: "OS28-VII"
+}, {
+  id: "OS28-VIII",
+  name: "OS28-VIII"
+}, {
+  id: "OS29-I",
+  name: "OS29-I"
+}, {
+  id: "OS29-II",
+  name: "OS29-II"
+}, {
+  id: "OS29-III",
+  name: "OS29-III"
+}, {
+  id: "OS29-III-bis",
+  name: "OS29-III-bis"
+}, {
+  id: "OS29-IV",
+  name: "OS29-IV"
+}, {
+  id: "OS29-IV-bis",
+  name: "OS29-IV-bis"
+}, {
+  id: "OS29-V",
+  name: "OS29-V"
+}, {
+  id: "OS29-VI",
+  name: "OS29-VI"
+}, {
+  id: "OS29-VII",
+  name: "OS29-VII"
+}, {
+  id: "OS29-VIII",
+  name: "OS29-VIII"
+}, {
+  id: "OS30-I",
+  name: "OS30-I"
+}, {
+  id: "OS30-II",
+  name: "OS30-II"
+}, {
+  id: "OS30-III",
+  name: "OS30-III"
+}, {
+  id: "OS30-III-bis",
+  name: "OS30-III-bis"
+}, {
+  id: "OS30-IV",
+  name: "OS30-IV"
+}, {
+  id: "OS30-IV-bis",
+  name: "OS30-IV-bis"
+}, {
+  id: "OS30-V",
+  name: "OS30-V"
+}, {
+  id: "OS30-VI",
+  name: "OS30-VI"
+}, {
+  id: "OS30-VII",
+  name: "OS30-VII"
+}, {
+  id: "OS30-VIII",
+  name: "OS30-VIII"
+}, {
+  id: "OS31-I",
+  name: "OS31-I"
+}, {
+  id: "OS31-II",
+  name: "OS31-II"
+}, {
+  id: "OS31-III",
+  name: "OS31-III"
+}, {
+  id: "OS31-III-bis",
+  name: "OS31-III-bis"
+}, {
+  id: "OS31-IV",
+  name: "OS31-IV"
+}, {
+  id: "OS31-IV-bis",
+  name: "OS31-IV-bis"
+}, {
+  id: "OS31-V",
+  name: "OS31-V"
+}, {
+  id: "OS31-VI",
+  name: "OS31-VI"
+}, {
+  id: "OS31-VII",
+  name: "OS31-VII"
+}, {
+  id: "OS31-VIII",
+  name: "OS31-VIII"
+}, {
+  id: "OS32-I",
+  name: "OS32-I"
+}, {
+  id: "OS32-II",
+  name: "OS32-II"
+}, {
+  id: "OS32-III",
+  name: "OS32-III"
+}, {
+  id: "OS32-III-bis",
+  name: "OS32-III-bis"
+}, {
+  id: "OS32-IV",
+  name: "OS32-IV"
+}, {
+  id: "OS32-IV-bis",
+  name: "OS32-IV-bis"
+}, {
+  id: "OS32-V",
+  name: "OS32-V"
+}, {
+  id: "OS32-VI",
+  name: "OS32-VI"
+}, {
+  id: "OS32-VII",
+  name: "OS32-VII"
+}, {
+  id: "OS32-VIII",
+  name: "OS32-VIII"
+}, {
+  id: "OS33-I",
+  name: "OS33-I"
+}, {
+  id: "OS33-II",
+  name: "OS33-II"
+}, {
+  id: "OS33-III",
+  name: "OS33-III"
+}, {
+  id: "OS33-III-bis",
+  name: "OS33-III-bis"
+}, {
+  id: "OS33-IV",
+  name: "OS33-IV"
+}, {
+  id: "OS33-IV-bis",
+  name: "OS33-IV-bis"
+}, {
+  id: "OS33-V",
+  name: "OS33-V"
+}, {
+  id: "OS33-VI",
+  name: "OS33-VI"
+}, {
+  id: "OS33-VII",
+  name: "OS33-VII"
+}, {
+  id: "OS33-VIII",
+  name: "OS33-VIII"
+}, {
+  id: "OS34-I",
+  name: "OS34-I"
+}, {
+  id: "OS34-II",
+  name: "OS34-II"
+}, {
+  id: "OS34-III",
+  name: "OS34-III"
+}, {
+  id: "OS34-III-bis",
+  name: "OS34-III-bis"
+}, {
+  id: "OS34-IV",
+  name: "OS34-IV"
+}, {
+  id: "OS34-IV-bis",
+  name: "OS34-IV-bis"
+}, {
+  id: "OS34-V",
+  name: "OS34-V"
+}, {
+  id: "OS34-VI",
+  name: "OS34-VI"
+}, {
+  id: "OS34-VII",
+  name: "OS34-VII"
+}, {
+  id: "OS34-VIII",
+  name: "OS34-VIII"
+}, {
+  id: "OS35-I",
+  name: "OS35-I"
+}, {
+  id: "OS35-II",
+  name: "OS35-II"
+}, {
+  id: "OS35-III",
+  name: "OS35-III"
+}, {
+  id: "OS35-III-bis",
+  name: "OS35-III-bis"
+}, {
+  id: "OS35-IV",
+  name: "OS35-IV"
+}, {
+  id: "OS35-IV-bis",
+  name: "OS35-IV-bis"
+}, {
+  id: "OS35-V",
+  name: "OS35-V"
+}, {
+  id: "OS35-VI",
+  name: "OS35-VI"
+}, {
+  id: "OS35-VII",
+  name: "OS35-VII"
+}, {
+  id: "OS35-VIII",
+  name: "OS35-VIII"
+}]; 
+
 const notesFilter = [
 	<SearchInput source='q' alwaysOn />,
-  <SelectArrayInput source="categories_soa" label="Categorie SOA" />,
-  <SelectArrayInput source="categories_not_soa" label="Categorie non SOA" choices={categories} />,
+  <AutocompleteArrayInput source="categories_soa" label="Categoria SOA" choices={categories_soa}/>,
+  <AutocompleteArrayInput source="categories_not_soa" label="Categoria non SOA" choices={categories}/>,
 ];
 
 

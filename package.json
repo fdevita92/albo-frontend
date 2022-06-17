@@ -35,8 +35,10 @@
     ]
   },
   "devDependencies": {
+    "final-form": "^4.20.7",
     "ra-language-italian": "^3.13.1",
     "rc-multi-level-selector": "^0.3.4",
+    "react-final-form": "^6.5.9",
     "react-multi-level-selector": "^1.0.1"
   }
 }
