@@ -13,6 +13,7 @@ import {
   TextInput,
 } from 'react-admin';
 import CategoryChipField from './CategoryChipField';
+import CustomDateField from './CustomDateField';
 
 
 const categories = [
@@ -1663,12 +1664,12 @@ export const NotesList = ({ ...props }) => {
         <TextField source="name" label="Ragione sociale"/>
         <TextField source="location" label="Località"/>
         <TextField source="taxcode" sortable={false} label="Cod. Fiscale"/>
-        <CategoryChipField source="categories_soa" label="Categorie SOA" />
-        <CategoryChipField source="categories_not_soa" label="Categorie non SOA" />
-        {/* <TextField source="categories_soa" sortable={false} label="Categorie SOA"/> */}
-        {/* <TextField source="categories_not_soa" sortable={false} label="Categorie non SOA"/> */}
-        <TextField source="invitedDate" sortable={false} label="Data invito" fullWidth/>
-        <TextField source="winnerDate" sortable={false} label="Data aggiudicazione"/>
+        <CategoryChipField source="categories_soa" sortable={false} label="Categorie SOA" />
+        <CategoryChipField source="categories_not_soa" sortable={false} label="Categorie non SOA" />
+        <CustomDateField source="invitedDate" sortable={false} label="Data invito" />
+        <CustomDateField source="winnerDate" sortable={false} label="Data aggiudicazione" />
+        {/* <TextField source="invitedDate" sortable={false} label="Data invito" fullWidth/> */}
+        {/* <TextField source="winnerDate" sortable={false} label="Data aggiudicazione"/> */}
         <EditButton label="Modifica" basePath="/notes" />
         <DeleteButton label="Elimina" basePath="/notes" />
         <ShowButton label="Mostra" basePath='/notes'/>
