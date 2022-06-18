@@ -10,7 +10,9 @@ import {
   SearchInput,
   AutocompleteArrayInput,
   downloadCSV,
+  TextInput,
 } from 'react-admin';
+import CategoryChipField from './CategoryChipField';
 
 
 const categories = [
@@ -1637,6 +1639,8 @@ const notesFilter = [
 	<SearchInput source='q' alwaysOn />,
   <AutocompleteArrayInput source="categories_soa" label="Categoria SOA" choices={categories_soa}/>,
   <AutocompleteArrayInput source="categories_not_soa" label="Categoria non SOA" choices={categories}/>,
+  <TextInput required source="invitedDate" label="Data invito"/>,
+  <TextInput required source="winnerDate" label="Data aggiudicatrice"/>, 
 ];
 
 const exporter = data => {
@@ -1649,17 +1653,22 @@ const exporter = data => {
 };
 
 
+
 //const NotesList = (props) => {
 export const NotesList = ({ ...props }) => {
   return (
-    <List filters={notesFilter} title={"Albi"} exporter={exporter} {...props}>
+    <List filters={notesFilter} title={"Albi"} exporter={exporter} pagination={false} {...props}>
       <Datagrid>
         <TextField source="number" label="Numero"/>
         <TextField source="name" label="Ragione sociale"/>
         <TextField source="location" label="Località"/>
         <TextField source="taxcode" sortable={false} label="Cod. Fiscale"/>
-        <TextField source="categories_soa" sortable={false} label="Categorie SOA"/>
-        <TextField source="categories_not_soa" sortable={false} label="Categorie non SOA"/>
+        <CategoryChipField source="categories_soa" label="Categorie SOA" />
+        <CategoryChipField source="categories_not_soa" label="Categorie non SOA" />
+        {/* <TextField source="categories_soa" sortable={false} label="Categorie SOA"/> */}
+        {/* <TextField source="categories_not_soa" sortable={false} label="Categorie non SOA"/> */}
+        <TextField source="invitedDate" sortable={false} label="Data invito" fullWidth/>
+        <TextField source="winnerDate" sortable={false} label="Data aggiudicazione"/>
         <EditButton label="Modifica" basePath="/notes" />
         <DeleteButton label="Elimina" basePath="/notes" />
         <ShowButton label="Mostra" basePath='/notes'/>
