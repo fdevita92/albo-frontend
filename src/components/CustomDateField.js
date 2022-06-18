@@ -1,4 +1,3 @@
-import * as React from "react";
 import get from "lodash/get";
 import {useRecordContext} from 'react-admin';
 import moment from "moment";
