@@ -18,7 +18,7 @@ const CategoryChipField = (props) => {
 							color='secondary'
 							style={{backgroundColor:'CornFlowerBlue', margin:5}}
 							label={e}
-							key={source}
+							//key={source}
 							size='small'
 						/>
 					);

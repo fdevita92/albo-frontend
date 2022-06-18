@@ -1,6 +1,7 @@
 import React from 'react';
 import { Create, SimpleForm, TextInput , DateInput, AutocompleteArrayInput} from 'react-admin';
 
+
 const categories = [
   { id: 'OG1', name: 'OG1' },
   { id: 'OG2', name: 'OG2' },
@@ -1633,8 +1634,8 @@ const NotesCreate = (props) => {
         <TextInput required source="taxcode" label="Cod. Fiscale"/>
         <AutocompleteArrayInput source="categories_soa" label="Categoria SOA" choices={categories_soa}/>
         <AutocompleteArrayInput source="categories_not_soa" label="Categoria non SOA" choices={categories}/>
-        <DateInput source="invitedDate" label="Data invito"/>
-        <DateInput source="winnerDate" label="Data aggiudicazione"/>
+        <DateInput source="invitedDate" type={"date"} label="Data invito"/>
+        <DateInput source="winnerDate" type={"date"} label="Data aggiudicazione"/>
       </SimpleForm>
     </Create>
   );
