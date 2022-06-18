@@ -18,7 +18,7 @@ export default {
                 }
             })
             .then(auth => {
-                localStorage.setItem('username', JSON.stringify(auth));
+                localStorage.setItem('auth', JSON.stringify(auth));
                 return Promise.resolve();
             })
             .catch(() => {

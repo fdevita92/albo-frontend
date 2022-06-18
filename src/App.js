@@ -7,6 +7,8 @@ import {NotesList} from './components/NotesList';
 import NotesEdit from './components/NotesEdit';
 import NotesCreate from './components/NotesCreate';
 import NotesShow from './components/NotesShow'
+import authProvider from './authProvider';
+
 
 const i18nProvider = polyglotI18nProvider(() => italianMessages, "it", {
 	allowMissing: true,
@@ -14,7 +16,7 @@ const i18nProvider = polyglotI18nProvider(() => italianMessages, "it", {
 
 function App() {
   return (
-    <Admin dataProvider={dataProvider} i18nProvider={i18nProvider}>
+    <Admin dataProvider={dataProvider} i18nProvider={i18nProvider} authProvider={authProvider}>
       <Resource
         name="notes"
         options = {{label:"Imprese di lavori"}}
