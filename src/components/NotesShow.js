@@ -9,9 +9,11 @@ export const NotesShow = (props) => {
 		<SimpleShowLayout>
             <TextField source='number' label='Numero' />
 			<TextField source='name' label='Ragione Sociale' />
-            <TextField source="location" label="Località"/>
+            <TextField source="location" label="Sede legale"/>
             <TextField source="address" label="Indirizzo"/>
             <TextField source="pec" label="PEC"/>
+            <TextField source="email" label="E-mail" />
+            <TextField source="vat_number" label="Partita IVA" />
             <TextField source="taxcode" label="Cod. Fiscale"/>
             <CategoryChipField source="categories_soa" sortable={false} label="Categorie SOA" />
             <CategoryChipField source="categories_not_soa" sortable={false} label="Categorie non SOA" /> 

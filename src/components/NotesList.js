@@ -1638,7 +1638,7 @@ const categories_soa = [{
 
 const notesFilter = [
 	<SearchInput source='q' alwaysOn />,
-  <TextInput source="location" label="Località"/>,
+  <TextInput source="location" label="Sede legale"/>,
   <AutocompleteArrayInput source="categories_soa" label="Categoria SOA" choices={categories_soa}/>,
   <AutocompleteArrayInput source="categories_not_soa" label="Categoria non SOA" choices={categories}/>,
   <TextInput required source="invitedDate" label="Anno di invito"/>,
@@ -1648,8 +1648,7 @@ const notesFilter = [
 const exporter = data => {
   const csv = convertToCSV({
       data,
-      columns:["Ragione sociale", "Località", "Indirizzo", "Codice fiscale", "PEC", "Categorie SOA", "Categorie non SOA", "Data invito", "Data aggiudicatrice"],
-      fields: ['name','location','address','taxcode','pec','categories_soa','categories_not_soa','invitedDate','winnerDate'],
+      fields: ['name','location','address','pec','email','taxcode','vat_number','categories_soa','categories_not_soa','invitedDate','winnerDate'],
   });
   downloadCSV(csv, 'Imprese_lavori');
 };
@@ -1663,7 +1662,7 @@ export const NotesList = ({ ...props }) => {
       <Datagrid>
         <TextField source="number" label="Numero"/>
         <TextField source="name" label="Ragione sociale"/>
-        <TextField source="location" label="Località"/>
+        <TextField source="location" label="Sede legale"/>
         <TextField source="taxcode" sortable={false} label="Cod. Fiscale"/>
         <CategoryChipField source="categories_soa" sortable={false} label="Categorie SOA" />
         <CategoryChipField source="categories_not_soa" sortable={false} label="Categorie non SOA" />

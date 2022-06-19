@@ -18,38 +18,26 @@ import CategoryChipField from './CategoryChipField';
 const notesFilter = [
     <SearchInput source='q' alwaysOn />,
     <TextInput source="location" label="Sede legale"/>,
-    <ArrayInput source='categories' label="Settori merciologici">
+    <ArrayInput source='type_of_services' label="Tipo di servizi">
     <SimpleFormIterator>
         <TextInput label="Categoria"/>
     </SimpleFormIterator>
     </ArrayInput>,
 ];
 
-/*<AutocompleteArrayInput
-onCreate={() => {
-    const newTagName = prompt('Inserisci una nuova categoria');
-    const newTag = { id: newTagName, name: newTagName };
-    tags.push(newTag);
-    return newTag;
-}}
-source="categories"
-label="Settori merciologici"
-createItemLabel=""
-optionText=""
-choices={tags}
-/>,*/
+
 
 const exporter = data => {
   const csv = convertToCSV({
       data,
-      fields: ['name','location','address','pec','email','taxcode','vat_number','categories'],
+      fields: ['name','location','address','pec','email','taxcode','vat_number','type_of_services'],
   });
-  downloadCSV(csv, 'Imprese_forniture');
+  downloadCSV(csv, 'Imprese_servizi');
 };
 
 
 //const NotesList = (props) => {
-export const SuppliesList = ({ ...props }) => {
+export const ServicesList = ({ ...props }) => {
   return (
     <List filters={notesFilter} title={"Albi"} exporter={exporter} pagination={false} bulkActionButtons={false}
     {...props}>
@@ -58,10 +46,10 @@ export const SuppliesList = ({ ...props }) => {
         <TextField source="name" label="Ragione sociale"/>
         <TextField source="location" label="Sede legale"/>
         <TextField source="taxcode" sortable={false} label="Cod. Fiscale"/>
-        <CategoryChipField source="categories" sortable={false} label="Settori merciologici" />
-        <EditButton label="Modifica" basePath="/supplies" />
-        <DeleteButton label="Elimina" basePath="/supplies" />
-        <ShowButton label="Mostra" basePath='/supplies'/>
+        <CategoryChipField source="type_of_services" sortable={false} label="Tipo di servizi" />
+        <EditButton label="Modifica" basePath="/services" />
+        <DeleteButton label="Elimina" basePath="/services" />
+        <ShowButton label="Mostra" basePath='/services'/>
       </Datagrid>
     </List>
   );

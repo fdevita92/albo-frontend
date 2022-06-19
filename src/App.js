@@ -9,8 +9,12 @@ import NotesCreate from './components/NotesCreate';
 import NotesShow from './components/NotesShow'
 import { SuppliesList } from './components/SuppliesList';
 import SuppliesCreate from './components/SuppliesCreate';
-import SuppliesEdit from './SuppliesEdit';
+import SuppliesEdit from './components/SuppliesEdit';
 import SuppliesShow from './components/SuppliesShow';
+import { ServicesList } from './components/ServicesList';
+import ServicesCreate from './components/ServicesCreate';
+import ServicesEdit from './components/ServicesEdit';
+import ServicesShow from './components/ServicesShow';
 import authProvider from './authProvider';
 
 
@@ -36,6 +40,14 @@ function App() {
        edit={SuppliesEdit}
        create={SuppliesCreate}
        show={SuppliesShow}
+      />
+      <Resource
+      name="services"
+      options={{label:"Servizi"}}
+      list={ServicesList}
+      edit={ServicesEdit}
+      create={ServicesCreate}
+      show={ServicesShow}
       />
 
     </Admin>

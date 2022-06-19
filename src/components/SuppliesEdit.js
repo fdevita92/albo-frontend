@@ -1,10 +1,9 @@
 import React from 'react';
-import { Create, SimpleForm, TextInput, ArrayInput, SimpleFormIterator} from 'react-admin';
+import { Edit, SimpleForm, TextInput, ArrayInput, SimpleFormIterator} from 'react-admin';
 
-
-const SuppliesCreate = (props) => {
+const SuppliesEdit = (props) => {
   return (
-    <Create title="Aggiungi nuova Impresa" {...props}>
+    <Edit title="Modifica Impresa" {...props}>
       <SimpleForm>
         <TextInput required source="number" label="Numero"/>
         <TextInput required source="name" label="Ragione sociale"/>
@@ -20,8 +19,8 @@ const SuppliesCreate = (props) => {
             </SimpleFormIterator>
         </ArrayInput>
       </SimpleForm>
-    </Create>
+    </Edit>
   );
 };
 
-export default SuppliesCreate;
+export default SuppliesEdit;
