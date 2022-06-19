@@ -19,9 +19,9 @@ const CustomDateField = (props) => {
     }
 };
 
-/*
+
 CustomDateField.defaultProps = {
 	addLabel: true,
-};*/
+};
 
 export default CustomDateField;

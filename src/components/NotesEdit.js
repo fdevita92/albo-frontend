@@ -1633,8 +1633,8 @@ const NotesEdit = (props) => {
         <TextInput required source="taxcode" label="Cod. Fiscale"/>
         <AutocompleteArrayInput source="categories_soa" label="Categoria SOA" choices={categories_soa}/>
         <AutocompleteArrayInput source="categories_not_soa" label="Categoria non SOA" choices={categories}/>
-        <DateInput  source="invitedDate" label="Data invito"/>
-        <DateInput  source="winnerDate" label="Data aggiudicataria"/>
+        <DateInput  source="invitedDate" label="Data di invito"/>
+        <DateInput  source="winnerDate" label="Data di aggiudicazione"/>
       </SimpleForm>
     </Edit>
   );

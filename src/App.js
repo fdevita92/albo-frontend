@@ -7,6 +7,10 @@ import {NotesList} from './components/NotesList';
 import NotesEdit from './components/NotesEdit';
 import NotesCreate from './components/NotesCreate';
 import NotesShow from './components/NotesShow'
+import { SuppliesList } from './components/SuppliesList';
+import SuppliesCreate from './components/SuppliesCreate';
+import SuppliesEdit from './SuppliesEdit';
+import SuppliesShow from './components/SuppliesShow';
 import authProvider from './authProvider';
 
 
@@ -19,12 +23,21 @@ function App() {
     <Admin dataProvider={dataProvider} i18nProvider={i18nProvider} authProvider={authProvider}>
       <Resource
         name="notes"
-        options = {{label:"Imprese di lavori"}}
+        options = {{label:"Lavori"}}
         list={NotesList}
         edit={NotesEdit}
         create={NotesCreate}
         show={NotesShow}
       />
+      <Resource
+       name="supplies" 
+       options = {{label:"Forniture"}}
+       list={SuppliesList}
+       edit={SuppliesEdit}
+       create={SuppliesCreate}
+       show={SuppliesShow}
+      />
+
     </Admin>
   );
 }

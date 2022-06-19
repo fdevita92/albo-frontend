@@ -1638,10 +1638,11 @@ const categories_soa = [{
 
 const notesFilter = [
 	<SearchInput source='q' alwaysOn />,
+  <TextInput source="location" label="Località"/>,
   <AutocompleteArrayInput source="categories_soa" label="Categoria SOA" choices={categories_soa}/>,
   <AutocompleteArrayInput source="categories_not_soa" label="Categoria non SOA" choices={categories}/>,
-  <TextInput required source="invitedDate" label="Data invito"/>,
-  <TextInput required source="winnerDate" label="Data aggiudicatrice"/>, 
+  <TextInput required source="invitedDate" label="Anno di invito"/>,
+  <TextInput required source="winnerDate" label="Anno di aggiudica"/>, 
 ];
 
 const exporter = data => {
@@ -1658,7 +1659,7 @@ const exporter = data => {
 //const NotesList = (props) => {
 export const NotesList = ({ ...props }) => {
   return (
-    <List filters={notesFilter} title={"Albi"} exporter={exporter} pagination={false} {...props}>
+    <List filters={notesFilter} title={"Albi"} exporter={exporter} pagination={false}  bulkActionButtons={false} {...props}>
       <Datagrid>
         <TextField source="number" label="Numero"/>
         <TextField source="name" label="Ragione sociale"/>
@@ -1666,8 +1667,8 @@ export const NotesList = ({ ...props }) => {
         <TextField source="taxcode" sortable={false} label="Cod. Fiscale"/>
         <CategoryChipField source="categories_soa" sortable={false} label="Categorie SOA" />
         <CategoryChipField source="categories_not_soa" sortable={false} label="Categorie non SOA" />
-        <CustomDateField source="invitedDate" sortable={false} label="Data invito" />
-        <CustomDateField source="winnerDate" sortable={false} label="Data aggiudicazione" />
+        <CustomDateField source="invitedDate" sortable={false} label="Data di invito" />
+        <CustomDateField source="winnerDate" sortable={false} label="Data di aggiudicazione" />
         {/* <TextField source="invitedDate" sortable={false} label="Data invito" fullWidth/> */}
         {/* <TextField source="winnerDate" sortable={false} label="Data aggiudicazione"/> */}
         <EditButton label="Modifica" basePath="/notes" />
