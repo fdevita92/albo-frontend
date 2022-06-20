@@ -1,4 +1,4 @@
-import { SimpleShowLayout, TextField, Show,} from "react-admin";
+import { SimpleShowLayout, TextField, Show, EmailField,} from "react-admin";
 import React from 'react';
 import CategoryChipField from './CategoryChipField';
 import CustomDateField from './CustomDateField';
@@ -11,8 +11,10 @@ export const NotesShow = (props) => {
 			<TextField source='name' label='Ragione Sociale' />
             <TextField source="location" label="Sede legale"/>
             <TextField source="address" label="Indirizzo"/>
-            <TextField source="pec" label="PEC"/>
-            <TextField source="email" label="E-mail" />
+            <EmailField source="pec" label="PEC"  />
+            <EmailField source="email" label="E-mail"  />
+            {/* <TextField source="pec" label="PEC"/> */}
+            {/* <TextField source="email" label="E-mail" /> */}
             <TextField source="vat_number" label="Partita IVA" />
             <TextField source="taxcode" label="Cod. Fiscale"/>
             <CategoryChipField source="categories_soa" sortable={false} label="Categorie SOA" />

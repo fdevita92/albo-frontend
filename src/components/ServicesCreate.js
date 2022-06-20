@@ -14,7 +14,7 @@ const ServicesCreate = (props) => {
         <TextInput  source="email" label="E-mail"/>
         <TextInput required source="vat_number" label="Partita IVA"/>
         <TextInput required source="taxcode" label="Cod. Fiscale"/>
-        <ArrayInput source='type_of_services' label="Tipo di servizi">
+        <ArrayInput source='type_of_services' label="Tipologia">
             <SimpleFormIterator>
                 <TextInput label="Categoria"/>
             </SimpleFormIterator>

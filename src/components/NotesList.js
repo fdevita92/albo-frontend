@@ -1,5 +1,4 @@
 import React from 'react';
-import { unparse as convertToCSV } from 'papaparse/papaparse.min';
 import {
   List,
   Datagrid,
@@ -9,12 +8,12 @@ import {
   ShowButton,
   SearchInput,
   AutocompleteArrayInput,
-  downloadCSV,
   TextInput,
 } from 'react-admin';
 import CategoryChipField from './CategoryChipField';
 import CustomDateField from './CustomDateField';
 
+import {jsPDF} from 'jspdf';
 
 const categories = [
   { id: 'OG1', name: 'OG1' },
@@ -1645,12 +1644,54 @@ const notesFilter = [
   <TextInput required source="winnerDate" label="Anno di aggiudica"/>, 
 ];
 
+const createHeaders = (keys) => {
+ return keys.map((key)=>({
+  id:key.id,
+  name:key.id,
+  prompt:key.label,
+  width: key.id === "number" ? 20 : 48,
+  align:"center",
+  padding:0
+ }));
+
+}
+
 const exporter = data => {
-  const csv = convertToCSV({
-      data,
-      fields: ['name','location','address','pec','email','taxcode','vat_number','categories_soa','categories_not_soa','invitedDate','winnerDate'],
-  });
-  downloadCSV(csv, 'Imprese_lavori');
+  const newData = data.map((record,i) => ({
+    id:i.toString(),
+    number: record.number.toString(),
+    name: record.name.toString(),
+    location: record.location.toString(),
+    address: record.address.toString(),
+    pec: record.pec.toString(),
+    email: record.hasOwnProperty('email') ? record.email.toString() : " ",
+    taxcode: record.taxcode.toString(),
+    vat_number: record.vat_number.toString(),
+    categories_soa: record.categories_soa.join("\n"),
+    categories_not_soa: record.categories_not_soa.length ? record.categories_not_soa.join("\n") : " ",
+    invitedDate: record.hasOwnProperty('inviteDate') ? record.invitedDate.toString() : " ",
+    winnerDate: record.hasOwnProperty('winnerDate') ? record.winnerDate.toString() : " ",
+  }));
+  
+  const headers = createHeaders([
+    {id:'number',label:'N.'},
+    {id:'name',label:'Nome'},
+    {id:"location",label:'Ragione sociale'},
+    {id:'address',label:'Indirizzo'},
+    {id:'pec',label:'PEC'},
+    {id:'email',label:'E-mail'},
+    {id:'taxcode',label:'Codice Fiscale'},
+    {id:'vat_number',label:'Partita IVA'},
+    {id:'categories_soa',label:'Categorie SOA'},
+    {id:'categories_not_soa',label:'Categories non SOA'},
+    {id:'invitedDate',label:'Data di invito'},
+    {id:'winnerDate',label:'Data di aggiudicazione'}  
+  ]);
+  
+  const doc = new jsPDF({ putOnlyUsedFonts: true, orientation: "landscape", format: "a3" });
+  doc.setFontSize(4);
+  doc.table(5, 1, newData, headers, { autoSize: false, fontSize:8 });
+  doc.save("Imprese_lavori.pdf");
 };
 
 
