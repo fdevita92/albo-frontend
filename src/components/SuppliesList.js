@@ -66,7 +66,7 @@ const createHeaders = (keys) => {
    const doc = new jsPDF({ putOnlyUsedFonts: true, orientation: "landscape", format: "a3" });
    doc.setFontSize(4);
    doc.table(7, 1, newData, headers, { autoSize: false, fontSize:8});
-   doc.save("Imprese_forniture.pdf");
+   doc.save("Albo_forniture.pdf");
  };
 
 

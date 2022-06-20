@@ -1628,7 +1628,7 @@ const NotesCreate = (props) => {
       <SimpleForm>
         <TextInput required source="number" label="Numero"/>
         <TextInput required source="name" label="Ragione sociale"/>
-        <TextInput required source="location" label="Località"/>
+        <TextInput required source="location" label="Sede legale"/>
         <TextInput required source="address" label="Indirizzo"/>
         <TextInput required source="pec" label="PEC"/>
         <TextInput  source="email" label="E-mail"/>

@@ -1691,7 +1691,7 @@ const exporter = data => {
   const doc = new jsPDF({ putOnlyUsedFonts: true, orientation: "landscape", format: "a3" });
   doc.setFontSize(4);
   doc.table(5, 1, newData, headers, { autoSize: false, fontSize:8 });
-  doc.save("Imprese_lavori.pdf");
+  doc.save("Albo_lavori.pdf");
 };
 
 

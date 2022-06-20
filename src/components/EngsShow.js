@@ -3,7 +3,7 @@ import React from 'react';
 import CategoryChipField from './CategoryChipField';
 import CustomDateField from './CustomDateField';
 
-export const NotesShow = (props) => {
+export const EngsShow = (props) => {
     return(
 	<Show title={"Mostra Impresa"} {...props}>
 		<SimpleShowLayout>
@@ -15,8 +15,7 @@ export const NotesShow = (props) => {
             <EmailField source="email" label="E-mail"  />
             <TextField source="vat_number" label="Partita IVA" />
             <TextField source="taxcode" label="Cod. Fiscale"/>
-            <CategoryChipField source="categories_soa" sortable={false} label="Categorie SOA" />
-            <CategoryChipField source="categories_not_soa" sortable={false} label="Categorie non SOA" /> 
+            <CategoryChipField source="type_of_services" sortable={false} label="Tipologia" />
             <CustomDateField source="invitedDate" sortable={false} label="Data di invito" />
             <CustomDateField source="winnerDate" sortable={false} label="Data di aggiudicazione" />   
 		</SimpleShowLayout>
@@ -24,4 +23,4 @@ export const NotesShow = (props) => {
     );
 };
 
-export default NotesShow;
+export default EngsShow;

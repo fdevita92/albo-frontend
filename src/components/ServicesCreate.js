@@ -16,7 +16,7 @@ const ServicesCreate = (props) => {
         <TextInput required source="taxcode" label="Cod. Fiscale"/>
         <ArrayInput source='type_of_services' label="Tipologia">
             <SimpleFormIterator>
-                <TextInput label="Categoria"/>
+                <TextInput label="Servizio"/>
             </SimpleFormIterator>
         </ArrayInput>
       </SimpleForm>

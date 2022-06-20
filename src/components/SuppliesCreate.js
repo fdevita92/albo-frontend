@@ -16,7 +16,7 @@ const SuppliesCreate = (props) => {
         <TextInput required source="taxcode" label="Cod. Fiscale"/>
         <ArrayInput source='categories' label="Settori merciologici">
             <SimpleFormIterator>
-                <TextInput label="Categoria"/>
+                <TextInput label="Fornitura"/>
             </SimpleFormIterator>
         </ArrayInput>
       </SimpleForm>
