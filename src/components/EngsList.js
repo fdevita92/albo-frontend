@@ -84,7 +84,7 @@ const notesFilter = [
   <TextInput source="location" label="Sede legale"/>,
   <AutocompleteArrayInput source="type_of_services" label="Tipologia" choices={categories}/>,
   <TextInput required source="invitedDate" label="Anno di invito"/>,
-  <TextInput required source="winnerDate" label="Anno di aggiudica"/>, 
+  <TextInput required source="winnerDate" label="Anno di aggiudicazione"/>, 
 ];
 
 const createHeaders = (keys) => {

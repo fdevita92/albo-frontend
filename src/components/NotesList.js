@@ -1641,7 +1641,7 @@ const notesFilter = [
   <AutocompleteArrayInput source="categories_soa" label="Categoria SOA" choices={categories_soa}/>,
   <AutocompleteArrayInput source="categories_not_soa" label="Categoria non SOA" choices={categories}/>,
   <TextInput required source="invitedDate" label="Anno di invito"/>,
-  <TextInput required source="winnerDate" label="Anno di aggiudica"/>, 
+  <TextInput required source="winnerDate" label="Anno di aggiudicazione"/>, 
 ];
 
 const createHeaders = (keys) => {
