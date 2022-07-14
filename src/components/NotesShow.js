@@ -19,6 +19,7 @@ export const NotesShow = (props) => {
             <CategoryChipField source="categories_not_soa" sortable={false} label="Categorie non SOA" /> 
             <CustomDateField source="invitedDate" sortable={false} label="Data di invito" />
             <CustomDateField source="winnerDate" sortable={false} label="Data di aggiudicazione" />   
+            <TextField source="additional_notes" label="Note" />
 		</SimpleShowLayout>
 	</Show>
     );

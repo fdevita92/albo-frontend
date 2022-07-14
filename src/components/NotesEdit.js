@@ -1630,13 +1630,14 @@ const NotesEdit = (props) => {
         <TextInput required source="location" label="Sede legale"/>
         <TextInput required source="address" label="Indirizzo"/>
         <TextInput required source="pec" label="PEC"/>
-        <TextInput required source="taxcode" label="Cod. Fiscale"/>
         <TextInput  source="email" label="E-mail"/>
         <TextInput required source="vat_number" label="Partita IVA"/>
+        <TextInput required source="taxcode" label="Cod. Fiscale"/>
         <AutocompleteArrayInput source="categories_soa" label="Categoria SOA" choices={categories_soa}/>
         <AutocompleteArrayInput source="categories_not_soa" label="Categoria non SOA" choices={categories}/>
         <DateInput  source="invitedDate" label="Data di invito"/>
         <DateInput  source="winnerDate" label="Data di aggiudicazione"/>
+        <TextInput source="additional_notes" fullWidth={true} label="Note"/>
       </SimpleForm>
     </Edit>
   );

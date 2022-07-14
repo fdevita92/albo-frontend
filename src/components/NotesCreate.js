@@ -1638,6 +1638,7 @@ const NotesCreate = (props) => {
         <AutocompleteArrayInput source="categories_not_soa" label="Categoria non SOA" choices={categories}/>
         <DateInput source="invitedDate" type={"date"} label="Data di invito"/>
         <DateInput source="winnerDate" type={"date"} label="Data di aggiudicazione"/>
+        <TextInput source="additional_notes" fullWidth={true} label="Note"/>
       </SimpleForm>
     </Create>
   );
