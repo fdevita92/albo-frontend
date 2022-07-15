@@ -14,6 +14,7 @@ export const ServicesShow = (props) => {
         <TextField source="vat_number" label="Partita IVA" />
         <TextField source="taxcode" label="Cod. Fiscale"/>
         <CategoryChipField source="type_of_services" sortable={false} label="Tipologia" />
+        <TextField source="additional_notes" label="Note" />
 		</SimpleShowLayout>
 	</Show>
     );

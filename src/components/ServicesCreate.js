@@ -19,6 +19,7 @@ const ServicesCreate = (props) => {
                 <TextInput label="Servizio"/>
             </SimpleFormIterator>
         </ArrayInput>
+        <TextInput source="additional_notes" fullWidth={true} label="Note"/>
       </SimpleForm>
     </Create>
   );

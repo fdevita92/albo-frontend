@@ -19,6 +19,7 @@ const SuppliesCreate = (props) => {
                 <TextInput label="Fornitura"/>
             </SimpleFormIterator>
         </ArrayInput>
+        <TextInput source="additional_notes" fullWidth={true} label="Note"/>
       </SimpleForm>
     </Create>
   );

@@ -14,6 +14,7 @@ export const SuppliesShow = (props) => {
         <TextField source="vat_number" label="Partita IVA" />
         <TextField source="taxcode" sortable={false} label="Cod. Fiscale"/>
         <CategoryChipField source="categories" sortable={false} label="Settori merciologici" />
+        <TextField source="additional_notes" label="Note" />
 		</SimpleShowLayout>
 	</Show>
     );

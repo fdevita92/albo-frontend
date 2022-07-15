@@ -17,7 +17,8 @@ export const EngsShow = (props) => {
             <TextField source="taxcode" label="Cod. Fiscale"/>
             <CategoryChipField source="type_of_services" sortable={false} label="Tipologia" />
             <CustomDateField source="invitedDate" sortable={false} label="Data di invito" />
-            <CustomDateField source="winnerDate" sortable={false} label="Data di aggiudicazione" />   
+            <CustomDateField source="winnerDate" sortable={false} label="Data di aggiudicazione"/> 
+            <TextField source="additional_notes" label="Note" />  
 		</SimpleShowLayout>
 	</Show>
     );
