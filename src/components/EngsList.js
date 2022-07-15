@@ -83,6 +83,8 @@ const notesFilter = [
     <SearchInput source='q' alwaysOn />,
   <TextInput source="location" label="Sede legale"/>,
   <AutocompleteArrayInput source="type_of_services" label="Tipologia" choices={categories}/>,
+  <TextInput required source="taxcode" label="Codice Fiscale"/>,
+  <TextInput required source="vat_number" label="Partita IVA"/>, 
   <TextInput required source="invitedDate" label="Anno di invito"/>,
   <TextInput required source="winnerDate" label="Anno di aggiudicazione"/>, 
 ];

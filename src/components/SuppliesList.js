@@ -24,6 +24,8 @@ const notesFilter = [
         <TextInput label="Categoria"/>
     </SimpleFormIterator>
     </ArrayInput>,
+      <TextInput required source="taxcode" label="Codice Fiscale"/>,
+      <TextInput required source="vat_number" label="Partita IVA"/>, 
 ];
 
 const createHeaders = (keys) => {
