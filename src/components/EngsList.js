@@ -113,7 +113,7 @@ const exporter = data => {
     taxcode: record.taxcode.toString(),
     vat_number: record.vat_number.toString(),
     type_of_services: record.type_of_services.join("\n"),
-    invitedDate: record.hasOwnProperty('inviteDate') ? record.invitedDate.toString() : " ",
+    invitedDate: record.hasOwnProperty('invitedDate') ? record.invitedDate.toString() : " ",
     winnerDate: record.hasOwnProperty('winnerDate') ? record.winnerDate.toString() : " ",
   }));
   
