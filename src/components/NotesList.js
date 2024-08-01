@@ -1666,13 +1666,16 @@ const exporter = data => {
     location: record.location.toString(),
     address: record.address.toString(),
     pec: record.pec.toString(),
-    email: record.hasOwnProperty('email') ? record.email.toString() : " ",
+    //email: record.hasOwnProperty('email') ? record.email.toString() : " ",
+    email: Object.hasOwn(record,'email') ? record.email.toString() : " ",
     taxcode: record.taxcode.toString(),
     vat_number: record.vat_number.toString(),
     categories_soa: record.categories_soa.join("\n"),
     categories_not_soa: record.categories_not_soa.length ? record.categories_not_soa.join("\n") : " ",
-    invitedDate: record.hasOwnProperty('invitedDate') ? record.invitedDate.toString() : " ",
-    winnerDate: record.hasOwnProperty('winnerDate') ? record.winnerDate.toString() : " ",
+    //invitedDate: record.hasOwnProperty('invitedDate') ? record.invitedDate.toString() : " ",
+    invitedDate: Object.hasOwn(record,'invitedDate') ? record.invitedDate.toString() : " ",
+    //winnerDate: record.hasOwnProperty('winnerDate') ? record.winnerDate.toString() : " ",
+    winnerDate: Object.hasOwn(record,'winnerDate') ? record.winnerDate.toString() : " ",
   }));
   
   const headers = createHeaders([
